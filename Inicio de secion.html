@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Iniciar Sesión</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: url('ciudad1.jpg'), url('ciudad2.jpg'), url('ciudad3.jpg'); /* Rutas a tus imágenes de ciudades */
+        background-size: cover;
+        background-position: center;
+        animation: slide 15s linear infinite;
+    }
+    @keyframes slide {
+        0% {
+            background-position: 0% 50%, 100% 50%, 200% 50%;
+        }
+        100% {
+            background-position: 200% 50%, 100% 50%, 0% 50%;
+        }
+    }
+    .container {
+        width: 300px;
+        padding: 20px;
+        border-radius: 10px;
+        background-color: rgba(255, 255, 255, 0.8);
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        text-align: center;
+        animation: fadein 2s; /* Animación de fade in */
+    }
+    @keyframes fadein {
+        from {
+            opacity: 0;
+            transform: translateY(-20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    h2 {
+        margin-bottom: 20px;
+    }
+    input[type="text"],
+    input[type="password"] {
+        width: calc(100% - 40px);
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-sizing: border-box;
+        transition: border-color 0.3s;
+    }
+    input[type="text"]:focus,
+    input[type="password"]:focus {
+        border-color: #23a6d5; /* Cambia el color del borde al hacer focus */
+    }
+    input[type="submit"] {
+        background-color: #4CAF50;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+    input[type="submit"]:hover {
+        background-color: #45a049; /* Cambia el color de fondo al pasar el mouse */
+    }
+    .error-message {
+        color: red;
+        font-size: 14px;
+        margin-top: 10px;
+    }
+
+
+    
+    body {
+            background-color: #3498db; /* Color de fondo azul */
+            color: #fff; /* Color de texto blanco */
+        }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Iniciar Sesión</h2>
+    <form action="Trabajo Final Futbol.html" method="post" onsubmit="return validateForm()">
+        <input type="text" id="username" name="username" placeholder="Nombre de usuario" required><br>
+        <input type="password" id="password" name="password" placeholder="Contraseña" required><br>
+        <input type="submit" value="Iniciar Sesión">
+        <div id="error-msg" class="error-message" style="display: none;">Nombre de usuario o contraseña incorrectos.</div>
+    </form>
+</div>
+
+<script>
+    function validateForm() {
+        var username = document.getElementById("username").value;
+        var password = document.getElementById("password").value;
+
+        // Aquí puedes agregar tu lógica de autenticación
+        // Por ahora, solo comprobaremos si la contraseña es "password123"
+        if (password !== "edwin2425") {
+            document.getElementById("error-msg").style.display = "block";
+            return false; // Evita que el formulario se envíe
+        }
+
+        return true; // Permite que el formulario se envíe
+    }
+</script>
+
+</body>
+</html>

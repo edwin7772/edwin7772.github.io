@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boleta de Partido de Fútbol</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Agrega un archivo CSS externo para estilos -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .boleta {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            width: 400px;
+            padding: 20px;
+            animation: slideIn 0.5s ease forwards;
+        }
+        @keyframes slideIn {
+            from {
+                transform: translateY(-50%);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+        .encabezado {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .equipo {
+            text-align: center;
+        }
+        .equipo h2 {
+            margin: 0;
+            font-size: 24px;
+            color: #333;
+        }
+        .equipo p {
+            margin: 5px 0;
+            color: #666;
+        }
+        .vs {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .vs h2 {
+            margin: 0;
+            font-size: 20px;
+            color: #666;
+        }
+        .informacion-partido {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .informacion-partido p {
+            margin: 5px 0;
+            color: #666;
+        }
+        .comprar-entradas {
+            text-align: center;
+        }
+        .comprar-entradas button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+        .comprar-entradas button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+  
+    <div class="boleta">
+        <div class="encabezado">
+            <h1>Boleta de Partido de Fútbol</h1>
+        </div>
+        <div class="contenido">
+            <div class="equipo-local equipo">
+                <h2>Equipo Local</h2>
+                <p>Real Madrid</p>
+                <img src="halamadrid y nada mas.png" alt="Real Madrid">
+            </div>
+            <div class="vs">
+                <h2>VS</h2>
+            </div>
+            <div class="equipo-visitante equipo">
+                <h2>Equipo vicitante</h2>
+                <p>Dormuntd</p>
+                <img src="dormuntd.png" alt="Borrusia dormuntd>
+            </div>
+            <div class="informacion-partido">
+                <p>Fecha: 01 de Julio de 2024</p>
+                <p>Hora: 20:00</p>
+                <p>Estadio: San siro</p>
+                <p>Ciudad: Milan</p>
+            </div>
+            <div class="comprar-entradas">
+                <button>Comprar Entradas</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
